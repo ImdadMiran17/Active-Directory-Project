@@ -16,7 +16,7 @@ Now, let's install both the windows and ubuntu hosts which will act as the domai
 
 Installing windows 10 is a straight forward process which you can find here. Just remember one thing carefully. Install Windows pro version, not Home or anything. Only in Windows 10 pro, you are allowed to join as Domain users.
 
-After installing Windows 10, Let's change the name of our PC to `Target-PC`. Search for `This PC` with windows search functionality. Right click on `This PC` and choose `Properties`. Here, you will find a button that says `Rename this PC`. Change the name from here. 
+After installing Windows 10, Let's change the name of our PC to `Target-PC`. Search for `This PC` with windows search functionality. Right click on `This PC` and choose `Properties`. Here, you will find a button that says `Rename this PC`. Change the name of the PC from here. 
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20000406.png)
 
@@ -24,7 +24,20 @@ After installing Windows 10, Let's change the name of our PC to `Target-PC`. Sea
 
 In Windows 10, IP address is set automatically by default. Let's set a static IP address. First, right click on the ethernet icon in the taskbar and choose `Open Network & Internet settings`. 
 Scroll down a bit and choose `Change adapter options`. 
-There is only ethernet adapter. Right click on Ethernet option and choose properties. Then select `Internet Protocol Version 4 (TCP/IPv4) Properties` and click on properties. It is set to automatic by default. Change it to manual and set IP address, subnet mask, default gateway and DNS server.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-03-01%20174301.png)
+
+There is only ethernet adapter. Right click on Ethernet option and choose properties.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-03-01%20174342.png)
+
+Then select `Internet Protocol Version 4 (TCP/IPv4) Properties` and click on properties. It is set to automatic by default. Change it to manual and set IP address, subnet mask, default gateway and DNS server. For DNS server, we can set `8.8.8.8` which is Google's DNS server.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20214526.png)
+
+Now we should check if the IP settings are applied. Open cmd and run `ipconfig` command. Check if it's the same IP address that you have set earlier. Also, check if the DNS server is working.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20214526.png)
 
 # Configuring Ubuntu Server
 
