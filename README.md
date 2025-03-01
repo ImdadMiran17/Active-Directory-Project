@@ -31,13 +31,13 @@ There is only ethernet adapter. Right click on Ethernet option and choose proper
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-03-01%20174342.png)
 
-Then select `Internet Protocol Version 4 (TCP/IPv4) Properties` and click on properties. It is set to automatic by default. Change it to manual and set IP address, subnet mask, default gateway and DNS server. For DNS server, we can set `8.8.8.8` which is Google's DNS server.
+Then select `Internet Protocol Version 4 (TCP/IPv4)` and click on properties. It is set to automatic by default. Change it to manual and set IP address, subnet mask, default gateway and DNS server. For DNS server, we can set `8.8.8.8` which is Google's DNS server.
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20214526.png)
 
 Now we should check if the IP settings are applied. Open cmd and run `ipconfig` command. Check if it's the same IP address that you have set earlier. Also, check if the DNS server is working.
 
-![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20214526.png)
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20214744.png)
 
 # Configuring Ubuntu Server
 
