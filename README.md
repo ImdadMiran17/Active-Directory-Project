@@ -22,6 +22,10 @@ After installing Windows 10, Let's change the name of our PC to `Target-PC`. Sea
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20001655.png)
 
+In Windows 10, IP address is set automatically by default. Let's set a static IP address. First, right click on the ethernet icon in the taskbar and choose `Open Network & Internet settings`. 
+Scroll down a bit and choose `Change adapter options`. 
+There is only ethernet adapter. Right click on Ethernet option and choose properties. Then select `Internet Protocol Version 4 (TCP/IPv4) Properties` and click on properties. It is set to automatic by default. Change it to manual and set IP address, subnet mask, default gateway and DNS server.
+
 # Configuring Ubuntu Server
 
 We can say the same thing about the Ubuntu server. For system configuration, you can follow this. Other than that, it's only a matter of clicking some 'Done's and 'Continue's. You will face this screen surely. Complete it according to your preferences.
