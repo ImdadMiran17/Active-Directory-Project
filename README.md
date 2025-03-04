@@ -45,4 +45,21 @@ We can say the same thing about the Ubuntu server. For system configuration, you
 
 ![Profile Configuration](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20205733.png)
 
+After the installation is done, we should upgrade the machine first. So we can run these two commands:
+
+```
+Sudo apt update
+Sudo apt upgrade
+```
+
+Now, let's check the network settings of the machine. we can run:
+
+```
+ip a
+```
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20212514.png)
+
+It's set to the Windows 10 machine's IP address. So we have to set a static IP to this machine.
+
 
