@@ -68,11 +68,55 @@ sudo nano /etc/netplan/50-cloud-init.yaml
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20220212.png)
 
-Here, I have set up DHCP to `no`, set a static IP and set DNS server to google's DNS server. But this won't work. The IP is set perfectly as you can see but I didn't get any connectivity.
+Here, I have set up DHCP to `no`, set a static IP and set DNS server to google's DNS server. But this won't work. The IP is set perfectly as you can see but I didn't get any connectivity. You can always check with `ping` command.
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20220240.png)
 
-But why did that happen? 
+But why did that happen? Because we have to add the gateway IP (eg. `192.168.10.1`) to the nameservers addresses.
 
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-27%20005247.png)
 
+Now we are all set up. You can check connectivity and IP address settings by `ping` and `ip a` commands.
+
+## Configuring Windows Server 2022 and Active Directory
+
+Installing windows server is no different from installing windows 10 OS. But, while installing windows server, choose desktop version. After the installation is complete, we can follow the same procedure to set static IP address.
+
+Now let's open server manager. In the navbar, click on **Manager** and choose **Add Roles and Features**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20215929.png)
+
+This wizard box will be opened.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20220013.png)
+
+Click **Next**
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20220500.png)
+
+Select **Role-based or feature-based installation** and click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20220548.png)
+
+With the server selected, click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20220628.png)
+
+Select **Active Directory Domain Services** and click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20220647.png)
+
+Click **Add Features**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20220751.png)
+
+Click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20220812.png)
+
+Click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20220831.png)
+
+Click **Next**.
 
