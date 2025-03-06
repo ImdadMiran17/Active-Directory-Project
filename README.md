@@ -60,6 +60,19 @@ ip a
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20212514.png)
 
-It's set to the Windows 10 machine's IP address. So we have to set a static IP to this machine.
+It's set to the Windows 10 machine's IP address. So we have to set a static IP and configure DNS server of this machine. Let's edit out the networking file to add a static ip and DNS server to our linux machine.
+
+```
+sudo nano /etc/netplan/50-cloud-init.yaml
+```
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20220212.png)
+
+Here, I have set up DHCP to `no`, set a static IP and set DNS server to google's DNS server. But this won't work. The IP is set perfectly as you can see but I didn't get any connectivity.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20220240.png)
+
+But why did that happen? 
+
 
 
