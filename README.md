@@ -120,3 +120,75 @@ Click **Next**.
 
 Finally, Click **Install**.
 
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20220848.png)
+
+Now, wait for the installation to complete. After the installation of **ADDS** is complete, click on the flag icon in the Navbar where a alert is shown.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20231717.png)
+
+Click on **Promote this server to a domain controller**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20231936.png)
+
+Select **Add a new forest** and give a **Root Domain Name**. Then click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20232055.png)
+
+Give a secure password and then click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20232343.png)
+
+Click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20232416.png)
+
+Click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20232456.png)
+
+Click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20232532.png)
+
+Click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20232706.png)
+
+Now, Click on **Install**. When it is complete, a new forest is created with a root domain.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20233726.png)
+
+From the **Tools** drop-down menu, open **Active Directory Users and Computers**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20234047.png)
+
+Now, you can create new users directly but we should create them under a organizational unit. As in real world or office environment, users are divided into departments. Right click on your root domain (Here `imlab.local`) and under new, select **Organizational Unit**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20234115.png)
+
+Name it as you want. Then click **Ok**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20234215.png)
+
+Now, right click on the OU(Here, `IT`) you created. Under new, select **User**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20234342.png)
+
+Fill up the form how you desire. Then click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20234421.png)
+
+Give a secure password. For now, we can uncheck the **User must change password at next logon**. Then click **Next**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20234444.png)
+
+Then click **Finish**. Create another user under a new OU.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20000406.png)
+
+## Adding Windows 10 Target Machine as Domain User
+
+
+
+
+
