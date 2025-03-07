@@ -184,9 +184,9 @@ Give a secure password. For now, we can uncheck the **User must change password 
 
 Then click **Finish**. Create another user under a new OU.
 
-![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20000406.png)
-
 ## Adding Windows 10 Target Machine as Domain User
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20000406.png)
 
 
 
