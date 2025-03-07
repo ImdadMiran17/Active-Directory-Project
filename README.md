@@ -118,5 +118,5 @@ Click **Next**.
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20220831.png)
 
-Click **Next**.
+Finally, Click **Install**.
 
