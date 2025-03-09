@@ -214,11 +214,86 @@ After the greyed out problem is resolved, now is the time to resolve DNS problem
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20202534.png)
 
-The above incident occurs because the current DNS server doesn't recognize the AD domain. So we have to set up the Active Directory server as DNS. Change the DNS IP to AD server IP.
+The above incident occurs because the current DNS server doesn't recognize the AD domain. So we have to set up the Active Directory server as DNS. Change the DNS IP to AD server IP. After changing the settings, let's try to connect to the domain again. This time it should ask for username and password of the account I want to connect with. You can connect with **Administrator** credentials. After connecting to the domain, the pc will restart.
 
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20203723.png)
 
+Now, it will show a option to login as other user. We can login with accounts that we created in the domain.
 
+## Adding Ubuntu Server as Domain User
 
+Like the Windows 10 machine, we have to change the DNS to Active Directory Server. So run the command:
+
+```
+sudo nano /etc/netplan/50-cloud-init.yaml
+```
+
+And change the address under nameservers to Windows server IP. Then save the file and exit. Then run:
+
+```
+sudo netplan apply
+```
+
+Before we start, we need some components installed. So run:
+
+```
+sudo apt -y install realmd sssd sssd-tools libnss-sss libpam-sss adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
+```
+
+To check the hostname of the machine, run:
+
+```
+hostname
+```
+
+To change the hostname, we need to run: 
+
+```
+sudo hostnamectl set-hostname splunk
+```
+
+Now, we can start joining our Ubuntu server to the domain. Let's first check if we can discover the domain. Run:
+
+```
+realm discover imlab.local
+```
+
+It should find the domain we created. If you are getting **no such realm found** error, we have some extra steps to do. First run this command: 
+
+```
+sudo nano /etc/systemd/resolved.conf
+```
+
+Uncomment DNS and Domains line. In DNS enter the IP of your domain DNS, and in Domains enter the name of your local domain. Now we will switch this to version provided by system.
+
+```
+sudo ln -sf /run/systemd/resolve/resolv.conf /etc/resolv.conf
+```
+
+We have to restart the resolved service.
+
+```
+sudo systemctl stop systemd-resolved
+sudo systemctl start systemd-resolved
+```
+
+Now it should find the domain that we created.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-27%20015656.png)
+
+Let's join to our AD domain. We can run:
+
+```
+realm join -U Administrator imlab.local
+```
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-27%20015810.png)
+
+Let's check if it's connected.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-27%20015936.png)
+
+We can see that both of our machine is connected to the domain.
 
 
 
