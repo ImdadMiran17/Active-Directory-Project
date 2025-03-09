@@ -182,11 +182,41 @@ Give a secure password. For now, we can uncheck the **User must change password 
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20234444.png)
 
-Then click **Finish**. Create another user under a new OU.
+Then click **Finish**. Create another user under a new OU by yourself in the same way.
 
 ## Adding Windows 10 Target Machine as Domain User
 
+On windows search bar, search for **This PC** and go to properties by right-clicking on it.
+
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20000406.png)
+
+Now, this settings page will open.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20001655.png)
+
+Scroll down a bit and click on **Advanced System Settings**.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20001724.png)
+
+Below dialogue box will open. Go to **Computer Name** tab.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20002454.png)
+
+Now, Click on **Change** button.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20002513.png)
+
+If you see that the domain option is greyed out like this, It's only allowed in windows pro edition. So change your windows edition to windows pro.
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20002542.png)
+
+After the greyed out problem is resolved, now is the time to resolve DNS problem :)
+
+![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-26%20202534.png)
+
+The above incident occurs because the current DNS server doesn't recognize the AD domain. So we have to set up the Active Directory server as DNS. Change the DNS IP to AD server IP.
+
+
 
 
 
