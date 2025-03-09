@@ -39,7 +39,7 @@ Now we should check if the IP settings are applied. Open cmd and run `ipconfig` 
 
 ![](https://raw.githubusercontent.com/ImdadMiran17/Active-Directory-Project/refs/heads/main/screenshots%20ad%20project/Screenshot%202025-02-25%20214744.png)
 
-# Configuring Ubuntu Server
+## Configuring Ubuntu Server
 
 We can say the same thing about the Ubuntu server. For system configuration, you can follow this. Other than that, it's only a matter of clicking some 'Done's and 'Continue's. You will face this screen surely. Complete it according to your preferences.
 
